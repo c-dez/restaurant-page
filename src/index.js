@@ -1,5 +1,12 @@
-import { tacosObj } from "./obj/obj.js"
+export {content}
+
+import {menu} from '../src/modules/menu.js'
+
+// import {background} from '../src/modules/layout.js'
+import { makeContentElement } from './modules/content.js'
 
 const content = document.querySelector('#content')
-content.textContent = 'asdasd'
-console.log(tacosObj)
+makeContentElement()
+
+content.appendChild(menu())
+
