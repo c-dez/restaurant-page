@@ -1,4 +1,7 @@
 export {makeMenu} 
+import {  pastor} from '../modules/listItem.js'
+const listItem = pastor
+
 
 const makeMenu = ()=>{
     const container = document.createElement('div')
@@ -14,8 +17,13 @@ const makeMenu = ()=>{
     const title = makeTitle()
     container.appendChild(title)
 
-    const list = makeList()
-    container.appendChild(list)
+    const listContainer = makeList()
+    listContainer.style.display = 'grid'
+    container.appendChild(listContainer)
+
+    listContainer.appendChild(listItem)
+    listItem.style.gridArea = '1/2/2/3'
+    
 
 
     return container;
