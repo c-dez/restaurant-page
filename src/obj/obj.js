@@ -1,11 +1,15 @@
-export {tacosObj}
+export {pastorObj}
+import {icon1} from '../icons/makeIcon.js'
+
+
 
 const tacos = ['Pastor','Cesina','Cabeza', 'Campechano', 'Especial Goku']
+const precios = [['taco' ,20]['goku',50]]
 
-function Items(name, cost, imgUrl){
+function Items(name, cost, icon){
     this.name = name
     this.cost = cost
-    this.imgUrl = imgUrl
+    this.icon = icon
 }
 
-const tacosObj = new Items(tacos[0],'','')
+const pastorObj = new Items(tacos[0],20,icon1)
